@@ -1,11 +1,14 @@
-import logo from './logo.svg';
+import { Provider } from 'react-redux';
 import './App.css';
+import Body from './components/Body';
+import appStore from "./utils/appStore"
 
 function App() {
   return (
-    <div className="txt-3xl font-bold text-Red-500">
-      Welcome to React with Tailwind CSS
-    </div>
+    <Provider store={appStore}>
+   <Body/>
+    </Provider>
+
   );
 }
 
